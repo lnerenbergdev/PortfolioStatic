@@ -1,0 +1,79 @@
+Imidiate plan
+Bongo:
+	sketchbook page
+	description
+	tags
+	snippet
+
+Iframe demo:
+	
+
+
+
+
+<CONTENT>
+
+Fish
+	Create better graphical representation of fish 
+	Dispaly top fish neural network somewhere on the screen
+	write description
+	format/comment code
+	*Allow for user input for params
+
+Simple Pattern Recognition:
+	write description
+
+Neural Broker: 
+	Test Functionality
+	make sketchbook page
+	make thumnail 
+	write description
+
+Glitch Art
+	format/comment code
+	create code data
+	write description
+
+Know Your Code:
+	Make thumbnail
+	create code data
+	make sketchbook page
+	write description
+
+Iframe Demo:
+	create code data
+	write description
+
+Dopaminds:
+	Make thumbnail
+	make sketchbook page
+	write description
+
+Seemore Concept:
+	Make thumbnail
+	make sketchbook page
+	write description
+
+Bootstrap Demo page:
+	Make thumbnail 
+	make sketchbook page
+	write description
+
+
+<FUNCTIONALITY>
+
+Code Display:
+	Add expand functionality
+		button to expand/contract 
+
+Background:
+	Creat dotted whiteboard background ***
+
+<OTHER>
+
+Sassy Potions Blog
+Virtual Pets
+Type Script Data Type
+
+The motivation for this project is based around my desire to showcase my versitility as a programmer. I wanted to create fairly uniform format for the presentation of varying content. 
+
