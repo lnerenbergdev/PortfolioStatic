@@ -1,0 +1,110 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<link href="../../assets/prism.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="../../site-page-style.css">
+	<script language="javascript" type="text/javascript" src="data.js"></script>
+</head>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Lawson's Sketchbook</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sketches <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Fish</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Nav header</li>
+							<li><a href="#">Separated link</a></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<body>
+		<iframe id="expanded-iframe" src="index.html">
+			<p>Your browser does not support iframes.</p>
+		</iframe>
+
+
+		<button id="collapse-button"> Collapse </button>
+
+		<div class="code-index">
+			<h3> Snippets </h3>
+			<table class="table table-hover table-index">
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+		<pre><code id="snippet-content" class="language-html"></code></pre>
+
+
+		<div class="frame-container">
+			<button id="expand-button"> Expand </button>
+			<iframe id="collapsed-iframe" src="index.html">
+  				<p>Your browser does not support iframes.</p>
+			</iframe>
+		</div>
+	</body>
+	<script src="../../assets/prism.js"></script>
+	<script>
+		$.each(snippets, function(i, snippet) {
+			$('tbody').append("<tr><td id='" + i + "'>" + i + "</td></tr>");
+		});
+
+		$(function(){
+			$('td').first().addClass('active');
+
+			$('#snippet-content').empty();
+			$('#snippet-content').append(snippets['main']);
+			Prism.highlightAll();
+
+			$('td').click(function(){
+				console.log(snippets[this.id]);
+				$('#snippet-content').empty();
+				$('#snippet-content').append(snippets[this.id]);
+				Prism.highlightAll();
+			});
+
+			$('#expand-button').click(function(){
+				$('#expanded-iframe').css("visibility", "visible");
+				$('#snippet-content').empty();
+				$("#expand-button").css("visibility", "hidden");
+				$("#collapse-button").css("visibility", "visible");
+			});
+
+			$('#collapse-button').click(function(){
+				$('#expanded-iframe').css("visibility", "hidden");
+				$("#expand-button").css("visibility", "visible");
+				$("#collapse-button").css("visibility", "hidden");
+			});
+		});
+		
+	</script>
+</html>
+

@@ -1,0 +1,102 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+	<!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+	<link href="assets/prism.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="home-styles.css">
+	<script language="javascript" type="text/javascript" src="description-data.js"></script>
+</head>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Lawson's Sketchbook</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+					<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sketches <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Fish</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Nav header</li>
+							<li><a href="#">Separated link</a></li>
+							<li><a href="#">One more separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<body>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="conatiner-fluid">
+					<div class="thumbnails">
+						<a id="Fish" href="sketches/fish/main.html"><img src="assets/home/fish-thumb.jpg"  alt="..." alt="" /></a>
+						<a id="Glitch-Art" href="sketches/glitch-art/main.html"><img src="assets/home/glitch-art-thumb.jpg"  alt="..." alt="" /></a>
+						<a id="Sin-vs-Cos" href="sketches/sin-vs-cos/main.html"><img src="assets/home/sin-vs-cos-thumb.jpg"  alt="..." alt="" /></a>
+						<a id="Simple-Patern-Recog" href="sketches/simple-patern-recognition/main.html"><img src="assets/home/simple-patern-recognition-thumb.jpg"  alt="..." alt="" /></a>
+						<a id="Bongo" href="sites/bongo/main.html"><img src="assets/home/bongo-thumb.jpg"  alt="..." alt="" /></a>
+						<a id="Iframe-demo" href="sites/iframe-demo/main.html"><img src="assets/home/iframe-demo-thumb.jpg"  alt="..." alt="" /></a>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="highlight-display">
+				<img href="sketch-fish.html" id="highlight-thumb" src="assets/home/fish-thumb.jpg" style="float:left;border: 2px solid black;" width="175px" alt="..." alt="" />
+					<div class="highlight-info">
+						<h3 id="highlight-title"></h3>
+						<p id="highlight-description"></p>
+						<pre><code id="highlight-snippet" class="language-javascript"></code></pre>
+						<div id="highlight-tags"></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-12">
+				<div class="thumbnails">
+					<a id="Bootstrap-Concept-Demo" href="sites/Bootstrap-Tables/main.html"><img src="assets/home/Bootstrap-demo-thumb.jpg"  alt="..." alt="" /></a>
+					<a id="Jquery-Append-Demo" href="sites/jquery-append-demo/main.html"><img src="assets/home/jquery-append-demo-thumb.jpg"  alt="..." alt="" /></a>
+					<a id="Dray-Wilson-Photography" href="sites/dray-wilson-photography/main.html"><img src="assets/home/dray-wilson-photography-thumb.jpg"  alt="..." alt="" /></a>
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function(){
+				$("a").mouseover(function(){
+					$("#highlight-title").empty();
+					$("#highlight-title").append(this.id);
+					$("#highlight-description").empty();
+					$("#highlight-description").append(info[this.id].description);
+					$("#highlight-tags").empty();
+					$("#highlight-tags").append("<b>"+info[this.id].tags+"</b>");
+					$("#highlight-snippet").empty();
+					$("#highlight-snippet").append(info[this.id].snippet);
+					$("#highlight-thumb").attr("src",$(this).children("img").attr("src"));
+					Prism.highlightAll();
+				});
+			});
+		</script>
+		<script language="javascript" type="text/javascript" src="assets/prism.js"></script>
+	</body>
+</html>
+

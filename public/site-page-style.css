@@ -1,0 +1,73 @@
+body {
+	background-image: url("assets/background.jpg");
+	margin-top: 6vh;
+	padding: 0;
+}
+
+pre {
+	width:30%;
+	float:left;
+	height:92vh;
+	font-size:0.8em;
+}
+
+
+#canvas-container{
+	margin-top:8px;
+	float: left;
+	border-style: solid;
+	border-radius: 3px;
+	border-color: grey;
+}
+
+#collapse-button {
+	visibility: hidden;
+	position:absolute;
+	margin-top:10px;
+}
+
+#expand-button {
+	position:absolute;
+	margin-top:10px;
+}
+
+#expanded-iframe {
+	position:absolute;
+	width:100%;
+	height:92vh;
+	visibility:hidden;
+}
+
+#collapsed-iframe {
+	width:100%;
+	height:100%;
+}
+
+.code-index{
+	text-align: center;
+	color:lightgrey;
+	margin-left:0;
+	margin-top:8px;
+	background:hsl(0, 0%, 8%);
+	float:left;
+	width:10%;
+	height: 92vh;
+	border-style: solid;
+	border-radius: 3px;
+	border-color: grey;
+}
+
+.snippet-display{
+	height: 92vh;
+}
+
+.table-index{
+	color:lightgrey;
+}
+
+.frame-container {
+	float:right;
+	width:60%;
+	height:92vh;
+}
+

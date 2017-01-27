@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yey bootstrap!</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style>
+		.centered{
+			text-align: center;
+		}
+		.text-block{
+			width:40%;
+			margin:auto;
+		}
+		.code-block{
+			width:50%;
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 centered">
+				<h1> Jumbotron and Table Demonstration </h1>
+				<h5> By Lawson </h5>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">
+				<h2> Jumbotron Bootstrap Class </h2>
+				<div class="text-block">
+					<p> 
+						A jumbotron indicates a big box for calling extra attention to some special content or information.
+					</p>
+					<p>
+						A jumbotron is displayed as a grey box with rounded corners. It also enlarges the font sizes of the text inside it.
+					</p>
+					<p>
+						Tip: Inside a jumbotron you can put nearly any valid HTML, including other Bootstrap elements/classes.
+					</p>
+					<p>
+						(Blatently stolen from <a href="http://www.w3schools.com/bootstrap/bootstrap_jumbotron_header.asp">w3schools.com</a>)
+					</p>
+				</div>
+				<div class="jumbotron centered">
+					<h1> I am JUMBOTRON </h1>
+					<p> Hear me rawr </p>
+				</div>
+				<div class="code-block">
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"jumbotron centered"</span>></span>
+    <span style="color:#89bdff">&lt;<span style="color:#89bdff">h1</span>></span> I am JUMBOTRON <span style="color:#89bdff">&lt;/<span style="color:#89bdff">h1</span>></span>
+    <span style="color:#89bdff">&lt;<span style="color:#89bdff">p</span>></span> Hear me rawr <span style="color:#89bdff">&lt;/<span style="color:#89bdff">p</span>></span>
+<span style="color:#89bdff">&lt;/<span style="color:#89bdff">div</span>></span>
+</pre>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<h2> 
+			Tables
+		</h2>
+		<div class="row">
+			<div class="col-lg-12">
+				
+				<div class="text-block">
+					<h3>
+						Basic Bootstrap Table
+					</h3>
+					<p> Basic bootstrap tables look like this. Typical table css attributes can be used to overide defaults to achieve customization. </p>
+				</div>
+				<table class="table">
+					<thead>
+						<th> ID </th>
+						<th> Name </th>
+						<th> Amount Owed </th>
+						<th> Phone Number </th>
+					</thead>
+					<tbody>
+						<tr>
+							<td> 1 </td>
+							<td> Blake Miles </td>
+							<td> $500.00 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 2 </td>
+							<td> Adam Sandler </td>
+							<td> $3.50 </td>
+							<td> 808-555-2223 </td>
+						</tr>
+						<tr>
+							<td> 3 </td>
+							<td> Chuck Testa </td>
+							<td> $111.11 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 4 </td>
+							<td> Samuel Adams </td>
+							<td> $1500.00 </td>
+							<td> 808-555-2013 </td>
+						</tr>
+						<tr>
+							<td> 5 </td>
+							<td> Elon Musk </td>
+							<td> $5,000,0000,000 </td>
+							<td> 808-555-2423 </td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="code-block">
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#e0c589">&lt;<span style="color:#e0c589">table</span> <span style="color:#e0c589">class</span>=<span style="color:#65b042">"table"</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">thead</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> ID <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Name <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Amount Owed <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Phone Number <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">thead</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">tbody</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">tr</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 1 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> Blake Miles <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> $500.00 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 808-555-2023 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tr</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tbody</span>></span>
+<span style="color:#e0c589">&lt;/<span style="color:#e0c589">table</span>></span>
+
+</pre>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="text-block">
+					<h3>
+						Striped Table
+					</h3>
+					<p> The table-stripe class can be used in conjunction with the table class to add alternating colored rows to a table. </p>
+				</div>
+				<table class="table table-striped">
+					<thead>
+						<th> ID </th>
+						<th> Name </th>
+						<th> Amount Owed </th>
+						<th> Phone Number </th>
+					</thead>
+					<tbody>
+						<tr>
+							<td> 1 </td>
+							<td> Blake Miles </td>
+							<td> $500.00 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 2 </td>
+							<td> Adam Sandler </td>
+							<td> $3.50 </td>
+							<td> 808-555-2223 </td>
+						</tr>
+						<tr>
+							<td> 3 </td>
+							<td> Chuck Testa </td>
+							<td> $111.11 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 4 </td>
+							<td> Samuel Adams </td>
+							<td> $1500.00 </td>
+							<td> 808-555-2013 </td>
+						</tr>
+						<tr>
+							<td> 5 </td>
+							<td> Elon Musk </td>
+							<td> $5,000,0000,000 </td>
+							<td> 808-555-2423 </td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="code-block">
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#e0c589">&lt;<span style="color:#e0c589">table</span> <span style="color:#e0c589">class</span>=<span style="color:#65b042">"table table-striped"</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">thead</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> ID <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Name <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Amount Owed <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Phone Number <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">thead</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">tbody</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">tr</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 1 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> Blake Miles <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> $500.00 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 808-555-2023 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tr</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tbody</span>></span>
+<span style="color:#e0c589">&lt;/<span style="color:#e0c589">table</span>></span>
+
+</pre>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">	
+				<div class="text-block">
+					<h3>
+						Bordered Table
+					</h3>
+					<p> The table-bordered class can be used in conjunction with the table class to add a border around the entire table. </p>
+				</div>
+				<table class="table table-bordered">
+					<thead>
+						<th> ID </th>
+						<th> Name </th>
+						<th> Amount Owed </th>
+						<th> Phone Number </th>
+					</thead>
+					<tbody>
+						<tr>
+							<td> 1 </td>
+							<td> Blake Miles </td>
+							<td> $500.00 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 2 </td>
+							<td> Adam Sandler </td>
+							<td> $3.50 </td>
+							<td> 808-555-2223 </td>
+						</tr>
+						<tr>
+							<td> 3 </td>
+							<td> Chuck Testa </td>
+							<td> $111.11 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 4 </td>
+							<td> Samuel Adams </td>
+							<td> $1500.00 </td>
+							<td> 808-555-2013 </td>
+						</tr>
+						<tr>
+							<td> 5 </td>
+							<td> Elon Musk </td>
+							<td> $5,000,0000,000 </td>
+							<td> 808-555-2423 </td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="code-block">
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#e0c589">&lt;<span style="color:#e0c589">table</span> <span style="color:#e0c589">class</span>=<span style="color:#65b042">"table table-boardered"</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">thead</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> ID <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Name <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Amount Owed <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Phone Number <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">thead</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">tbody</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">tr</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 1 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> Blake Miles <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> $500.00 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 808-555-2023 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tr</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tbody</span>></span>
+<span style="color:#e0c589">&lt;/<span style="color:#e0c589">table</span>></span>
+
+</pre>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="text-block">
+					<h3>
+						Hover Rows
+					</h3>
+					<p> The table-hover class can be used in conjunction with the table class to enable hovering over table rows. </p>
+				</div>
+				<table class="table table-hover">
+					<thead>
+						<th> ID </th>
+						<th> Name </th>
+						<th> Amount Owed </th>
+						<th> Phone Number </th>
+					</thead>
+					<tbody>
+						<tr>
+							<td> 1 </td>
+							<td> Blake Miles </td>
+							<td> $500.00 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 2 </td>
+							<td> Adam Sandler </td>
+							<td> $3.50 </td>
+							<td> 808-555-2223 </td>
+						</tr>
+						<tr>
+							<td> 3 </td>
+							<td> Chuck Testa </td>
+							<td> $111.11 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 4 </td>
+							<td> Samuel Adams </td>
+							<td> $1500.00 </td>
+							<td> 808-555-2013 </td>
+						</tr>
+						<tr>
+							<td> 5 </td>
+							<td> Elon Musk </td>
+							<td> $5,000,0000,000 </td>
+							<td> 808-555-2423 </td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="code-block">
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#e0c589">&lt;<span style="color:#e0c589">table</span> <span style="color:#e0c589">class</span>=<span style="color:#65b042">"table table-hover"</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">thead</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> ID <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Name <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Amount Owed <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Phone Number <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">thead</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">tbody</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">tr</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 1 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> Blake Miles <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> $500.00 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 808-555-2023 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tr</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tbody</span>></span>
+<span style="color:#e0c589">&lt;/<span style="color:#e0c589">table</span>></span>
+
+</pre>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="text-block">
+					<h3>
+						Condensed Table
+					</h3>
+					<p> The table-condensed class can be used in conjunction with the table class create compact table by reducing cell padding by half. </p>
+				</div>
+				<table class="table table-condensed">
+					<thead>
+						<th> ID </th>
+						<th> Name </th>
+						<th> Amount Owed </th>
+						<th> Phone Number </th>
+					</thead>
+					<tbody>
+						<tr>
+							<td> 1 </td>
+							<td> Blake Miles </td>
+							<td> $500.00 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 2 </td>
+							<td> Adam Sandler </td>
+							<td> $3.50 </td>
+							<td> 808-555-2223 </td>
+						</tr>
+						<tr>
+							<td> 3 </td>
+							<td> Chuck Testa </td>
+							<td> $111.11 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 4 </td>
+							<td> Samuel Adams </td>
+							<td> $1500.00 </td>
+							<td> 808-555-2013 </td>
+						</tr>
+						<tr>
+							<td> 5 </td>
+							<td> Elon Musk </td>
+							<td> $5,000,0000,000 </td>
+							<td> 808-555-2423 </td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="code-block">
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#e0c589">&lt;<span style="color:#e0c589">table</span> <span style="color:#e0c589">class</span>=<span style="color:#65b042">"table table-condensed"</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">thead</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> ID <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Name <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Amount Owed <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Phone Number <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">thead</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">tbody</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">tr</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 1 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> Blake Miles <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> $500.00 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 808-555-2023 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tr</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tbody</span>></span>
+<span style="color:#e0c589">&lt;/<span style="color:#e0c589">table</span>></span>
+
+</pre>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="text-block">
+					<h3>
+						Contextual Tables
+					</h3>
+					<p> Contextual classes are used to color table rows and cells</p>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+							  <th>Class</th>
+							  <th>Description</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+							  <td><code class="w3-codespan">.active</code></td>
+							  <td>Applies the hover color to the table row or table cell</td>
+							</tr>
+							<tr>
+							  <td><code class="w3-codespan">.success</code></td>
+							  <td>Indicates a successful or positive action</td>
+							</tr>
+							<tr>
+							  <td><code class="w3-codespan">.info</code></td>
+							  <td>Indicates a neutral informative change or action</td>
+							</tr>
+							<tr>
+							  <td><code class="w3-codespan">.warning</code></td>
+							  <td>Indicates a warning that might need attention</td>
+							</tr>
+							<tr>
+							  <td><code class="w3-codespan">.danger</code></td>
+							  <td>Indicates a dangerous or potentially negative action</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<p> Table curtosiy of w3schools </p>
+				</div>
+				<table class="table">
+					<thead>
+						<th> ID </th>
+						<th> Name </th>
+						<th> Amount Owed </th>
+						<th> Phone Number </th>
+					</thead>
+					<tbody>
+						<tr class="success">
+							<td> 1 </td>
+							<td> Blake Miles </td>
+							<td> $500.00 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr class="danger">
+							<td> 2 </td>
+							<td> Adam Sandler </td>
+							<td> $3.50 </td>
+							<td> 808-555-2223 </td>
+						</tr>
+						<tr class="info">
+							<td> 3 </td>
+							<td> Chuck Testa </td>
+							<td> $111.11 </td>
+							<td> 808-555-2023 </td>
+						</tr>
+						<tr>
+							<td> 4 </td>
+							<td> Samuel Adams </td>
+							<td> $1500.00 </td>
+							<td> 808-555-2013 </td>
+						</tr>
+						<tr>
+							<td> 5 </td>
+							<td> Elon Musk </td>
+							<td> $5,000,0000,000 </td>
+							<td> 808-555-2423 </td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="code-block">
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#e0c589">&lt;<span style="color:#e0c589">table</span> <span style="color:#e0c589">class</span>=<span style="color:#65b042">"table"</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">thead</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> ID <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Name <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Amount Owed <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Phone Number <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">thead</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">tbody</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">tr <span style="color:#e0c589">class</span>=<span style="color:#65b042">"success"</span></span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 1 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> Blake Miles <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> $500.00 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 808-555-2023 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tr</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tbody</span>></span>
+<span style="color:#e0c589">&lt;/<span style="color:#e0c589">table</span>></span>
+
+</pre>
+
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="text-block">
+					<h3>
+						Responsive Tables
+					</h3>
+					<p> The table-responsive class enables scrolling within the table on small devices</p>
+				</div>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<th> ID </th>
+							<th> Name </th>
+							<th> Amount Owed </th>
+							<th> Phone Number </th>
+						</thead>
+						<tbody>
+							<tr>
+								<td> 1 </td>
+								<td> Blake Miles </td>
+								<td> $500.00 </td>
+								<td> 808-555-2023 </td>
+							</tr>
+							<tr>
+								<td> 2 </td>
+								<td> Adam Sandler </td>
+								<td> $3.50 </td>
+								<td> 808-555-2223 </td>
+							</tr>
+							<tr>
+								<td> 3 </td>
+								<td> Chuck Testa </td>
+								<td> $111.11 </td>
+								<td> 808-555-2023 </td>
+							</tr>
+							<tr>
+								<td> 4 </td>
+								<td> Samuel Adams </td>
+								<td> $1500.00 </td>
+								<td> 808-555-2013 </td>
+							</tr>
+							<tr>
+								<td> 5 </td>
+								<td> Elon Musk </td>
+								<td> $5,000,0000,000 </td>
+								<td> 808-555-2423 </td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="code-block">
+					<pre style="background:#000;color:#f8f8f8"><span style="color:#89bdff">&lt;<span style="color:#89bdff">div</span> <span style="color:#89bdff">class</span>=<span style="color:#65b042">"table-responsive"</span>></span>
+    <span style="color:#e0c589">&lt;<span style="color:#e0c589">table</span> <span style="color:#e0c589">class</span>=<span style="color:#65b042">"table"</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">thead</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> ID <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Name <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Amount Owed <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">th</span>></span> Phone Number <span style="color:#e0c589">&lt;/<span style="color:#e0c589">th</span>></span>
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">thead</span>></span>
+        <span style="color:#e0c589">&lt;<span style="color:#e0c589">tbody</span>></span>
+            <span style="color:#e0c589">&lt;<span style="color:#e0c589">tr</span>></span>
+                <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 1 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+                <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> Blake Miles <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+                <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> $500.00 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+                <span style="color:#e0c589">&lt;<span style="color:#e0c589">td</span>></span> 808-555-2023 <span style="color:#e0c589">&lt;/<span style="color:#e0c589">td</span>></span>
+            <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tr</span>></span>
+        <span style="color:#e0c589">&lt;/<span style="color:#e0c589">tbody</span>></span>
+    <span style="color:#e0c589">&lt;/<span style="color:#e0c589">table</span>></span>
+<span style="color:#89bdff">&lt;/<span style="color:#89bdff">div</span>></span>
+</pre>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

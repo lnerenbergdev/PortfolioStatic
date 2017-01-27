@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yey bootstrap!</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.1.1.js" ></script>
+	<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+	<style>
+		.centered{
+			text-align: center;
+		}
+		.jumbotron-custom{
+			background-color: #272822;
+			color: white;
+		}
+
+		.jumbotron-custom > h3 {
+			font-family: Consolas, monaco, monospace;
+			font-size: 23px;
+			font-style: normal;
+			font-variant: normal;
+			font-weight: 500;
+			line-height: 15.4px;
+		}
+
+
+		.text-block-left{
+			text-align: left;
+			width:100%;
+		}
+
+		.text-block-centered{
+			text-align: center;
+			width:100%;
+			margin:auto;
+		}
+		.code-block{
+			width:50%;
+			margin:auto;
+		}
+
+		.form-custom{
+			width: 100%;
+			height: 100%;
+		}
+
+		.demo-input-wrapper{
+			width: 100%;
+		}
+
+		.demo-display{
+			border-style: dotted;
+			border-color: red;
+			border-radius: 5px;
+			padding: 10px;
+			height: 250px;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 centered">
+				<h1> jQuery Method Demonstation: DOM Manipulation </h1>
+				<h5> By Lawson </h5>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-lg-12 centered">
+				<button id="nav-button-1"> <code> .append() </code> </button>
+				<button id="nav-button-2"> <code> .appendTo() </code> </button>
+				<button id="nav-button-3"> <code> .prepend() </code> </button>
+				<button id="nav-button-4"> <code> .prependTo() </code> </button>
+
+				<div class="text-block-centered">
+					<h4> <div id="description"></div> </h4>
+				</div>
+				<div class="jumbotron jumbotron-custom centered">
+
+					<h2> <div id="banner"></div> </h2>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+		
+			<div class="col-lg-4 col-md-4">
+			
+					<h3> <code>content</code> </h3>
+
+					<table class="table table-bordered table-custom centered">
+					
+						<tbody>
+							<th> Accepted Types </th>
+							<td> htmlString </td>
+							<td> Element </td>
+							<td> Text </td>
+							<td> Array </td>
+							<td> jQuery </td>
+						</tbody>
+					</table>
+
+					<div class="text-block-left">
+						<p> Appendable content may be supplied as a DOM element, HTML string, text node, array of elements and text nodes or jQuery object. Supplying the method append with one or more of these content types results in its insertion as the last child of the matched element/s.    </p>
+					</div>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4">
+				<h3> Demo </h3>
+				<div id="demo-input-container">
+			
+					<textarea class="form-control form-custom" id="demo-input" rows="12"></textarea>
+					
+				</div>
+				<button id="demo-button-submit"></button>
+
+			</div>
+
+			<div class="col-lg-4 col-md-4" >
+				<h3> <code> id='element' </code> </h3>
+				<div class="demo-display">
+					
+					<div id="demo-results">
+						<div id="element"></div>
+					</div>
+				</div>
+			 </div>
+		</div>
+		<hr>
+	</div>
+
+	<script type="text/javascript">
+
+		var inp = $('#demo-input').val();
+
+		function Page(description,banner,demoCode,demoElement){
+			
+
+			this.getDescription = function(){
+				return description;
+			};
+
+			this.getDemoCode = function(){
+				return demoCode;
+			};
+
+			this.getBanner = function(){
+				return banner;
+			};
+
+		}
+
+
+		var pages = [];
+		pages.push(new Page("jQuery's <code>.append()</code> method allows for the insertion of content to the end of elements in a matched set",
+			"<h2> <span style='color:#f92672'>$</span>(<span style='color:#fd971f'>'element'</span>).<span style='color:#66D9EF'>append</span>( content [, moreContent] ) </h2>",
+"<script>\n$(function(){\n  for(var i = 0; i < 10; i++){\n    $('#element').append('<tr>');\n    $('#element').append(i);\n    $('#element').append('</tr>');\n  }\n});\n</"+"script>"));
+
+			pages.push(new Page("jQuery's <code>.appendTo()</code> method allows for the insertion of content to the end of a target element/s",
+			"<h2> <span style='color:#f92672'>$</span>(<span style='color:#fd971f'>content</span>).<span style='color:#66D9EF'>appendTo</span>( target ) </h2>",
+"<script>\n$(function(){\n  for(var i = 0; i < 10; i++){\n    $('<tr>').appendTo('.target');\n    $(i).appendTo('.target');\n    $('</tr>').appendTo('.target');\n  }\n});\n</"+"script>"));
+
+			pages.push(new Page("jQuery's <code>.prepend()</code> method allows for the insertion of content as the first child of elements in a matched set",
+			"<h2> <span style='color:#f92672'>$</span>(<span style='color:#fd971f'>'element'</span>).<span style='color:#66D9EF'>prepend</span>( content [, moreContent] ) </h2>",
+"<script>\n$(function(){\n  for(var i = 0; i < 10; i++){\n    $('#element').prepend('<tr>');\n    $('#element').prepend(i);\n    $('#element').prepend('</tr>');\n  }\n});\n</"+"script>"));
+
+			pages.push(new Page("jQuery's <code>.prependTo()</code> method allows for the insertion of content as the first child of a target",
+			"<h2> <span style='color:#f92672'>$</span>(<span style='color:#fd971f'>content</span>).<span style='color:#66D9EF'>prependTo</span>( target ) </h2>",
+"<script>\n$(function(){\n  for(var i = 0; i < 10; i++){\n    $('<tr>').prependTo('.target');\n    $(i).prependTo('.target');\n    $('</tr>').prependTo('.target');\n  }\n});\n</"+"script>"));
+
+
+	
+		function demo(){
+
+			inp = $('#demo-input').text();
+
+			$('#demo-results').empty();
+			$('#demo-results').append('<div id="element"></div>');
+			$('#demo-results').append(inp);
+		}
+
+		$('#demo-button-submit').click(function(){
+				demo();
+		});
+
+		$('#nav-button-1').click(function(){
+				displayCurrentPage(pages[0]);
+		});
+
+		$('#nav-button-2').click(function(){
+				displayCurrentPage(pages[1]);
+		});
+
+		$('#nav-button-3').click(function(){
+				displayCurrentPage(pages[2]);
+		});
+
+		$('#nav-button-4').click(function(){
+				displayCurrentPage(pages[3]);
+		});
+
+		$(function(){
+			displayCurrentPage(pages[0]);
+		});
+
+		function displayCurrentPage(currentPage){
+			$('#demo-input').empty();
+			$('#description').empty();
+			$('#banner').empty();
+
+			$('#demo-input').val(currentPage.getDemoCode());
+			$('#description').append(currentPage.getDescription());
+			$('#banner').append(currentPage.getBanner());
+		}
+		
+	</script>
+
+	
+
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

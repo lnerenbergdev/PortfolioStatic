@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Drayson Wilson Photography </title>
+	<style type="text/css" src="style.css"></style>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="draywilsonphotography-style.css">
+</head>
+<body>
+<div class="container-fluid">
+	<div class="col-lg-12 col-md-12">
+		<div class="row">
+			<div class="container-fluid">
+				<div class="col-lg-2 col-md-2">
+					<div id="navbar">
+						<div id="title">
+							<h1> Drayson </h1>
+						</div>
+						<div id="title">
+							<h1> Wilson </h1>
+						</div>
+						<div id="title">
+							<h1> Photography </h1>
+						</div>
+
+						<div id="menu">
+							<h4> Ocean </h4>
+						</div>
+						<div id="menu">
+							<h4> Land </h4>
+						</div>
+						<div id="menu">
+							<h4> Sky </h4>
+						</div>
+						<div id="menu">
+							<h4> Travel </h4>
+						</div>
+						<div id="menu">
+							<h4> Portfolio </h4>		
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-lg-10 col-md-10">
+					<div class="col-lg-8 col-md-8">
+						<div id="frame">
+							<img id="preview" class="img" src="images/5.jpg" height="100%">
+						</div>
+					</div>
+
+
+					<div class="col-md-4">
+						<div class="col-md-12 centered-vertically gallery-column">
+							<div class="col-md-6">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/1.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/2.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/3.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/4.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/5.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/6.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/7.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/8.jpg">
+							</div>
+							<div class="col-md-6">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/9.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/10.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/11.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/12.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/13.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/14.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/15.jpg">
+								<img class="img-responsive thumbnail thumbnail-custom" src="images/16.jpg">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <footer class="footer">
+  <div class="container-fluid text-centered">
+    <p class="text-muted"></p>
+  </div>
+</footer> -->
+
+<footer class="navbar-fixed-bottom">
+      <div class="container">
+        <p class="text-muted">© 2016  Dray Wilson Photography - All Rights</p>
+      </div>
+</footer>
+
+</body>
+
+<script>
+$(function() {
+ 	$('.thumbnail').mouseover(function(){
+ 		$('#preview').attr('src',(this).src);
+
+ 		if($('#frame').width() < $('#preview').width()){
+ 			$('#preview').attr('width','100%');
+ 			$('#preview').attr('height','auto');
+ 			$('#preview').css('margin-left','0');
+ 		} else if($('#frame').height() < $('#preview').height()){
+ 			$('#preview').attr('width','auto');
+ 			$('#preview').attr('height','100%');
+
+ 			var offset = ($('#frame').width() - $('#preview').width())/2;
+ 			console.log(offset);
+
+ 			$('#preview').css('margin-left',offset);
+ 		}
+
+ 		$('#preview').center();
+ 		console.log("Frame width: " + $('#frame').width());
+ 		console.log("Preview width: " + $('#preview').width());
+
+ 	});
+ });
+</script>
+</html>
+
+
+

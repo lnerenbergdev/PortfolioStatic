@@ -1,0 +1,12 @@
+body {
+	background-image: url("assets/background.jpg");
+}
+
+
+#canvas-container{
+	width: 725px;
+	margin: auto;
+	margin-top: 10vh;
+	border-style: solid;
+	border-color: white;
+}

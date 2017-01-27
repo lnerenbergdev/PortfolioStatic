@@ -1,0 +1,71 @@
+body {
+	background-image: url("assets/background.jpg");
+	margin-top: 10vh;
+}
+
+p {
+	text-align:justify;
+	padding-right: 2%
+}
+
+pre {
+	position: absolute;
+	bottom:25px;
+	width:35%;
+	height:40%;
+	font-size:0.8em;
+}
+
+.snippet-container {
+	position: relative;
+	width: 50%;
+}
+
+.index-table {
+	background-color:rgba(250, 250, 250, 1);
+	padding:2%;
+	border-radius:15px;
+	text-align: center;
+}
+
+.index-table > table {
+	width:100%;
+	margin:auto;
+	text-align:center;
+}
+
+
+.thumbnails {
+	width: 50%;
+	overflow-x: scroll;
+	margin: auto;
+	white-space: nowrap;
+}
+
+.thumbnails img {
+	height: 15vh;
+	border: 2px solid black;
+	border-radius: 1px;
+	margin-left: 5px;
+	margin-right: 5px;
+	background-color: white;
+}
+
+.highlight-display {
+	background-color: white;
+	width: 50%;
+	height: 50vh;
+	margin: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	border: 2px solid black;
+	border-radius: 2px;
+}
+
+.highlight-info {
+	margin-left: 25%;
+}
+
+#highlight-tags {
+	float:right;
+}

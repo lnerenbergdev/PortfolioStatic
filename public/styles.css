@@ -1,0 +1,40 @@
+body {
+	background-image: url("assets/background.jpg");
+	margin-top: 10vh;
+}
+
+pre {
+	background: black;
+}
+
+
+#canvas-container{
+	margin-top:8px;
+	float: left;
+	border-style: solid;
+	border-radius: 3px;
+	border-color: grey;
+}
+
+.code-index{
+	text-align: center;
+	color:lightgrey;
+	margin-top:8px;
+	background:hsl(0, 0%, 8%);
+	float:left;
+	width:10%;
+	height: 485px;
+	border-style: solid;
+	border-radius: 3px;
+	border-color: grey;
+
+}
+
+.snippet-display{
+	height: 10vh;
+}
+
+.table-index{
+	color:lightgrey;
+}
+

@@ -1,0 +1,47 @@
+body {
+	background-image: url("assets/background.jpg");
+	margin-top: 6vh;
+}
+
+pre {
+	font-size: 0.8em;
+	background: black;
+	width:40%;
+	float:left;
+	height:92vh;
+}
+
+.canvas-container{
+	width:50%;
+	float:left;
+}
+
+.canvas-center{
+	height:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.code-index{
+	text-align: center;
+	color:lightgrey;
+	margin-top:8px;
+	background:hsl(0, 0%, 8%);
+	float:left;
+	width:10%;
+	height: 92vh;
+	border-style: solid;
+	border-radius: 3px;
+	border-color: grey;
+
+}
+
+.snippet-display{
+	height: 10vh;
+}
+
+.table-index{
+	color:lightgrey;
+}
+
